@@ -25,9 +25,10 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" style="margin-top: 15px;">
       <h3>Devices Logged in</h3>
       <hr>
+      <LoggedInTable></LoggedInTable>
     </div>
   </div>
 </template>

@@ -1,8 +1,9 @@
 <template>
   <div :class="themeClass" class="app-wrapper">
-    <Sidebar :items="sidebarItems" :toggleTheme="toggleTheme"></Sidebar>
+    <Sidebar :items="sidebarItems"></Sidebar>
     <main class="app-main">
-      <div class="page-view">
+      <NavBar :toggleTheme="toggleTheme" :isDarkMode="isDarkMode"></NavBar>
+      <div class="page-view" >
         <NuxtPage></NuxtPage>
       </div>
     </main>
@@ -26,6 +27,7 @@ export default {
     ];
 
     const themeClass = computed(() => `theme-${theme.value}`);
+    const isDarkMode = computed(() => theme === 'dark');
 
     const toggleTheme = () => {
       theme.value = theme.value === 'light' ? 'dark' : 'light';
@@ -56,11 +58,12 @@ export default {
 <style>
 .app-wrapper {
   display: flex;
-  height: 100dvh;
+  min-height: 100dvh;
 }
 
 .app-main {
   flex-grow: 1;
+  overflow-x: hidden;
 }
 
 .page-view {

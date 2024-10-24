@@ -70,11 +70,25 @@ hr {
 .btn-green {
   background-color: #008000;
   color: white;
+  border: none;
 }
 
 .theme-dark .btn-green {
   background-color: #008000;
   color: white;
+  border: none;
+}
+
+.btn-red {
+  background-color: red;
+  color: white;
+  border: none;
+}
+
+.theme-dark .btn-red {
+  background-color: red;
+  color: white;
+  border: none;
 }
 
 
@@ -84,8 +98,15 @@ hr {
   border-radius: 10px;
   background: var(--primary-color);
   transition: var(--color-transition);
+  margin: 0 auto;
+  
 }
 
 .theme-dark .container  {
   background: var(--dark-primary-color);
+}
+
+.text-no-wrap {
+  text-wrap: nowrap;
+  overflow: hidden;
 }

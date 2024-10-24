@@ -1,5 +1,5 @@
 <template>
   <div class="container">
-    Home
+    Feedbacks
   </div>
 </template>

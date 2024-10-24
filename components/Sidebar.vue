@@ -18,6 +18,7 @@
           :class="{ active: $route.path === item.to }" 
           v-for="item in items" 
           :key="item.to"
+          @click="this.$router.push({path: item.to})"
         >
           <div class="sidebar-item-icon">
             <i class="bi" :class="item.icon"></i>
@@ -27,7 +28,7 @@
       </div>
       
       <div class="sidebar-footer">
-        <button class="btn" @click="toggleTheme">Theme</button>
+        
       </div>
     </div>
   </div>
@@ -36,10 +37,6 @@
 <script>
 export default {
   props: {
-    toggleTheme: {
-      type: Function,
-      required: true
-    },
     items: {
       type: Array,
       required: true,
