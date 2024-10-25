@@ -8,6 +8,7 @@
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   transition: background-color 0.2s ease;
 
@@ -22,6 +23,34 @@
     }
   }
 
+  &.btn-page{
+    border: 1px solid var(--border-color);
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 40px;
+    height: 40px;
+
+    &.active {
+      background-color: var(--background-color);
+      cursor: default;
+    }
+  }
+
+  .theme-dark &.btn-page{
+    border: 1px solid var(--dark-border-color);
+    background-color: var(--dark-background-color);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    width: 40px;
+    height: 40px;
+
+    &.active {
+      background-color: var(--dark-primary-color);
+      cursor: default;
+    }
+  }
+
   &.btn-danger {
     color: white;
     background-color: #dc3545;
@@ -32,7 +61,12 @@
   }
 
   &.btn-success {
-    background-color: green;
+    color: white;
+    background-color: #228B22;
+    
+    &:hover{
+      background-color: #219b21;
+    }
   }
 }
 

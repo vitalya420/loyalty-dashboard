@@ -22,7 +22,7 @@
             <textarea placeholder="Write about your business" rows="5" class="text-input" id="desc"></textarea>
           </div>
           <div>
-            <button class="btn btn-green">Save</button>
+            <button class="btn btn-success"> <i class="bi bi-floppy"></i> Save</button>
           </div>
         </div>
       </div>
@@ -50,13 +50,7 @@
             <label for="menu-enabled">Menu website:</label>
             <input type="checkbox" class="switch" id="menu-enabled">
           </div>
-          <div class="input-group row space-between">
-            <label for="rate">Currency to bonusses rate</label>
-            <div>
-              <input type="number" class="text-input" id="rate">
-              <span> equals one currency unit</span>
-            </div>
-          </div>
+          
         </div>
         
       </div>

@@ -37,7 +37,9 @@
 .sidebar-head {
   min-height: 80px;
   position: relative;
+  padding: 10px 5px;
 }
+
 
 .sidebar-logo {
   background: url("https://placehold.co/300x100") center/cover no-repeat;
@@ -121,6 +123,8 @@
   top: calc(50% - 15px);
   transition: var(--ease-transition);
   border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
 
 }
 

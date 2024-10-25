@@ -64,6 +64,7 @@ export default {
 .app-wrapper {
   display: flex;
   min-height: 100dvh;
+  overflow-x: hidden;
 }
 
 .app-main {

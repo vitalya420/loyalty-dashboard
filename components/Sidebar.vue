@@ -5,12 +5,12 @@
     <div class="sidebar" :class="{ 'sidebar-expanded': expanded }">
       <div class="sidebar-head">
         <div class="sidebar-logo" :class="{ 'opacity-0': !expanded }"></div>
-        <button class="sidebar-switch-btn btn" @click="switchSidebar">
+        <button class="sidebar-switch-btn " @click="switchSidebar">
           <i class="bi" :class="expanded ? 'bi-caret-left-fill' : 'bi-caret-right-fill'"></i>
         </button>
       </div>
       
-      <hr>
+      <hr style="padding: 0; margin: 0;">
       
       <div class="sidebar-body">
         <div 

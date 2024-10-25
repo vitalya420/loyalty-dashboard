@@ -1,5 +1,5 @@
 <template>
-  <div  id="logged-in-table">
+  <div class="table-wrapper">
     <table class="table">
       <thead>
         <tr>
@@ -17,30 +17,42 @@
             <span class="btn-hideable">Revoke</span>
           </button></td>
         </tr>
+        <tr>
+          <td>127.0.0.1</td>
+          <td>Google Chrome</td>
+          <td><button class="btn btn-danger">
+            <i class="bi bi-trash"></i> 
+            <span class="btn-hideable">Revoke</span>
+          </button></td>
+        </tr>
+        <tr>
+          <td>127.0.0.1</td>
+          <td>Google Chrome</td>
+          <td><button class="btn btn-danger">
+            <i class="bi bi-trash"></i> 
+            <span class="btn-hideable">Revoke</span>
+          </button></td>
+        </tr>
       </tbody>
     </table>
+    <div class="pagination">
+      <button class="btn btn-page active">1</button>
+      <button class="btn btn-page">2</button>
+      <button class="btn btn-page">3</button>
+    </div>
   </div>
 </template>
 
 
 <style scoped>
-#logged-in-table {
+.table-wrapper {
   width: 100%;
 }
 
-.table {
-  border-collapse: collapse;
-  width: 100%;
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
 }
-
-.table > th, td, tr {
-  border: 1px solid var(--border-color);
-  padding: 3px;
-  text-align: start;
-}
-
-.theme-dark .table > th, td, tr {
-  border: 1px solid var(--dark-border-color);
-}
-
 </style>
