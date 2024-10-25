@@ -1,0 +1,38 @@
+
+
+.btn {
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+
+  .theme-dark & {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+  }
+
+  @media (max-width: 768px) {
+    .btn-hideable {
+      display: none;
+    }
+  }
+
+  &.btn-danger {
+    color: white;
+    background-color: #dc3545;
+    
+    &:hover {
+      background-color: #bb2d3b;
+    }
+  }
+
+  &.btn-success {
+    background-color: green;
+  }
+}
+

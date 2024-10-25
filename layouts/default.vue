@@ -3,15 +3,16 @@
     <Sidebar :items="sidebarItems"></Sidebar>
     <main class="app-main">
       <NavBar :toggleTheme="toggleTheme" :isDarkMode="isDarkMode"></NavBar>
-      <div class="page-view" >
+      <div class="page-view">
         <NuxtPage></NuxtPage>
       </div>
     </main>
   </div>
 </template>
 
-
 <script>
+import { ref, computed, onMounted } from 'vue';
+
 export default {
   setup() {
     const theme = ref('light');
@@ -19,15 +20,19 @@ export default {
       { name: "Dashboard", icon: 'bi-house', to: '/' },
       { name: "Establishments", icon: 'bi-building', to: '/establishments' },
       { name: "News", icon: 'bi-newspaper', to: '/news' },
+      { name: "Promotions", icon: 'bi-percent', to: '/promotions' },
+      { name: "Stamps", icon: 'bi-check-circle', to: '/stamps' },
+      { name: "Coupons", icon: 'bi-gift', to: '/coupouns' },
       { name: "Manage staff", icon: 'bi-person-lines-fill', to: '/staff' },
       { name: "Menu", icon: 'bi-cup-hot', to: '/menu' },
       { name: "Clients", icon: 'bi-people', to: '/clients' },
       { name: "Feedbacks", icon: 'bi-star', to: '/feedbacks' },
+      { name: "Logs", icon: 'bi-journal-text', to: '/logs' },
       { name: "Settings", icon: 'bi-gear', to: '/settings' },
     ];
 
     const themeClass = computed(() => `theme-${theme.value}`);
-    const isDarkMode = computed(() => theme === 'dark');
+    const isDarkMode = computed(() => theme.value === 'dark'); // Corrected here
 
     const toggleTheme = () => {
       theme.value = theme.value === 'light' ? 'dark' : 'light';
@@ -49,11 +54,11 @@ export default {
       themeClass,
       toggleTheme,
       sidebarItems,
+      isDarkMode, // Make sure to return isDarkMode
     };
   }
 }
 </script>
-
 
 <style>
 .app-wrapper {
@@ -69,7 +74,4 @@ export default {
 .page-view {
   margin: calc(10px + 15px);
 }
-
-
-
 </style>

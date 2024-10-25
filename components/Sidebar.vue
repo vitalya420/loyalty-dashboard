@@ -15,7 +15,7 @@
       <div class="sidebar-body">
         <div 
           class="sidebar-item" 
-          :class="{ active: $route.path === item.to }" 
+          :class="{ active: isActive(item.to) }" 
           v-for="item in items" 
           :key="item.to"
           @click="this.$router.push({path: item.to})"
@@ -56,6 +56,10 @@ export default {
     },
     switchSidebar(){
       this.expanded = !this.expanded;
+    },
+    isActive(path){
+      const regex = new RegExp(`^${path}(\\/.*)?$`);
+      return regex.test(this.$route.path);
     }
   }
 }

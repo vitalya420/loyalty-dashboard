@@ -1,5 +1,5 @@
 <template>
-  <div class="create-card" @click="createMode">
+  <div class="create-card" @click="this.$router.push({path: '/establishments/create'})">
     <div class="center" v-if="!inCreateMode">
       <i class="bi bi-building-add icon"></i>
       <span class="hint">

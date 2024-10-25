@@ -12,8 +12,9 @@
         <tr>
           <td>127.0.0.1</td>
           <td>Google Chrome</td>
-          <td><button class="btn btn-red">
-            Logout
+          <td><button class="btn btn-danger">
+            <i class="bi bi-trash"></i> 
+            <span class="btn-hideable">Revoke</span>
           </button></td>
         </tr>
       </tbody>
