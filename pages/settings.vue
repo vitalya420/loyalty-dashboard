@@ -77,6 +77,10 @@
   flex-direction: column;
 }
 
+.input-group > label {
+  cursor: pointer;
+}
+
 .configuration-wrapper{
   display: flex;
   flex-direction: column;
