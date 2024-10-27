@@ -4,6 +4,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: "Poppins", serif;
 }
 
@@ -18,7 +19,7 @@
   --dark-background-color: #121212;
   --dark-text-color: #FFFFFF; 
   --dark-primary-color: #242527;
-  --dark-secondary-color: #03DAC6;
+  --dark-secondary-color: #3A3B3D;
   --dark-accent-color: #0047AB;
   --dark-border-color: #373737;
 

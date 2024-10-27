@@ -6,5 +6,6 @@ export default defineNuxtConfig({
     '@/assets/styles/main.scss',
     '@/assets/styles/button.scss',
     '@/assets/styles/table.scss',
+    '@/assets/styles/grid.scss'
   ]
 })

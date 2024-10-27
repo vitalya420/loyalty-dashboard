@@ -1,0 +1,21 @@
+$border-radius: 12px;
+
+@mixin hover-box-shadow($offset-x: 1px, $offset-y: 1px, $blur: 9px, $spread: 2px, $color-light: rgba(0, 0, 0, 0.1), $color-dark: rgba(128, 128, 128, 0.1)) {
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: $offset-x $offset-y $blur $spread $color-light;
+  }
+
+  .theme-dark & {
+    &:hover {
+      box-shadow: $offset-x $offset-y $blur $spread $color-dark;
+    }
+  }
+}
+
+@mixin rounded {
+  & {
+    border-radius: $border-radius;
+  }
+}

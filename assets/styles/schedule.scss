@@ -1,0 +1,143 @@
+@import 'mixins';
+
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+
+$border-radius-lg: 12px;
+$border-radius-sm: 8px;
+
+
+@mixin hover-transform {
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .theme-dark &:hover {
+    background-color: rgb(35, 35, 35);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+}
+
+@mixin focus-state {
+  &:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+}
+
+
+.work-schedule-card {
+  background: var(--primary-color);
+  padding: 10px;
+  width: 100%;
+  @include hover-box-shadow;
+  @include rounded;
+
+  .theme-dark & {
+    background: var(--dark-primary-color);
+    border: 1px solid var(--dark-border-color);
+    color: var(--dark-text-color);
+  }
+
+  .title {
+    border-bottom: 1px solid var(--border-color);
+
+    .theme-dark & {
+      border-bottom: 1px solid var(--dark-border-color);
+    }
+  }
+
+  .work-schedule-body {
+    display: grid;
+    gap: $spacing-sm;
+    width: 100%;
+    padding-top: 10px;
+  }
+}
+
+.day {
+  border: 1px solid var(--border-color);
+  background: var(--background-color);
+  border-radius: $border-radius-sm;
+  padding: $spacing-sm;
+  @include hover-transform;
+
+  .theme-dark & {
+    border: 1px solid var(--dark-border-color);
+    background: rgb(34, 33, 33);
+  }
+
+  .day-name {
+    font-weight: 500;
+    margin-bottom: $spacing-sm;
+    padding-bottom: $spacing-xs;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+    margin-bottom: $spacing-sm;
+
+    &.row {
+      flex-direction: row;
+      align-items: center;
+      gap: $spacing-sm;
+      justify-content: center;
+    }
+
+    label {
+      font-size: 0.875rem;
+    }
+
+    .time-input {
+      padding: $spacing-xs;
+      border: 1px solid var(--border-color);
+      border-radius: $border-radius-sm;
+      font-size: 0.875rem;
+      width: 100%;
+      transition: all 0.2s ease;
+      background-color: var(--background-color);
+      
+      @include focus-state;
+
+      .theme-dark & {
+        background: rgb(34, 33, 33);
+        color: var(--dark-text-color);
+        border: 1px solid var(--dark-border-color);
+      }
+
+      &:hover {
+        border-color: #9ca3af;
+      }
+    }
+  }
+
+  
+}
+
+// Responsive breakpoints
+@media (min-width: 640px) {
+  .work-schedule-body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .work-schedule-body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .work-schedule-body {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
