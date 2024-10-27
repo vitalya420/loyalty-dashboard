@@ -19,3 +19,11 @@ $border-radius: 12px;
     border-radius: $border-radius;
   }
 }
+
+@mixin ease-transtion {
+  transition: all 0.3s ease;
+}
+
+@mixin color-transition {
+  transition: background-color 0.3s, color 0.3s;
+}

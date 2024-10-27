@@ -18,7 +18,7 @@
 .button-primary {
   @extend .button;
   background-color: var(--button-primary);
-  color: var(--text-color-contrast);
+  color: white;
   
   &:hover {
     background-color: var(--button-primary-hover);
@@ -28,7 +28,7 @@
 .button-secondary {
   @extend .button;
   background-color: var(--button-secondary);
-  color: var(--text-color-contrast);
+  color: white;
   
   &:hover {
     background-color: var(--button-secondary-hover);
@@ -38,7 +38,7 @@
 .button-danger {
   @extend .button;
   background-color: var(--button-danger);
-  color: var(--text-color-contrast);
+  color: white;
   
   &:hover {
     background-color: var(--button-danger-hover);

@@ -65,6 +65,9 @@ export default {
   display: flex;
   min-height: 100dvh;
   overflow-x: hidden;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
 }
 
 .app-main {

@@ -24,12 +24,8 @@
 <style>
 .navbar-container {
   width: 100%;
-  background-color: var(--primary-color);
+  background: var(--background-primary-color);
   transition: background-color 0.3s ease;
-}
-
-.theme-dark .navbar-container {
-  background-color: var(--dark-primary-color);
 }
 
 .navbar {
