@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: [
     '@/assets/styles/main.scss',
-    '@/assets/styles/button.scss',
     '@/assets/styles/table.scss',
-    '@/assets/styles/grid.scss'
+    '@/assets/styles/grid.scss',
+    '@/assets/styles/_buttons.scss',
   ]
 })

@@ -31,21 +31,21 @@ export default {
       { name: "Settings", icon: 'bi-gear', to: '/settings' },
     ];
 
-    const themeClass = computed(() => `theme-${theme.value}`);
-    const isDarkMode = computed(() => theme.value === 'dark'); // Corrected here
+    const themeClass = computed(() => `${theme.value}-theme`);
+    const isDarkMode = computed(() => theme.value === 'dark');
 
     const toggleTheme = () => {
       theme.value = theme.value === 'light' ? 'dark' : 'light';
       if (import.meta.client) {
-        localStorage.setItem('theme', theme.value); // Store the theme in local storage
+        localStorage.setItem('theme', theme.value);
       }
     };
 
     onMounted(() => {
       if (import.meta.client) {
-        const storedTheme = localStorage.getItem('theme'); // Retrieve the theme from local storage
+        const storedTheme = localStorage.getItem('theme');
         if (storedTheme) {
-          theme.value = storedTheme; // Set the theme to the stored value
+          theme.value = storedTheme;
         }
       }
     });
@@ -54,7 +54,7 @@ export default {
       themeClass,
       toggleTheme,
       sidebarItems,
-      isDarkMode, // Make sure to return isDarkMode
+      isDarkMode, 
     };
   }
 }

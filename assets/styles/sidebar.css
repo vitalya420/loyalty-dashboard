@@ -48,11 +48,7 @@
 }
 
 /* Sidebar Body */
-.sidebar-body {
-  flex-grow: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
+
 
 /* Sidebar Items */
 .sidebar-item {
@@ -94,7 +90,7 @@
 /* Active and Hover States */
 .active {
   color: white;
-  background: blue;
+  background: #0000ff;
 }
 
 .active .sidebar-item-text {
@@ -106,7 +102,7 @@
 }
 
 .theme-light .sidebar-item:hover {
-  background-color: whitesmoke;
+  background-color: hwb(0 96% 4%);
 }
 
 /* Opacity Utility */
@@ -125,7 +121,6 @@
   border: none;
   cursor: pointer;
   background-color: var(--primary-color);
-
 }
 
 .sidebar-expanded .sidebar-switch-btn {

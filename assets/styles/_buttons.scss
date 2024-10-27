@@ -1,0 +1,46 @@
+@import 'variables';
+
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  box-shadow: var(--shadow-sm);
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.button-primary {
+  @extend .button;
+  background-color: var(--button-primary);
+  color: var(--text-color-contrast);
+  
+  &:hover {
+    background-color: var(--button-primary-hover);
+  }
+}
+
+.button-secondary {
+  @extend .button;
+  background-color: var(--button-secondary);
+  color: var(--text-color-contrast);
+  
+  &:hover {
+    background-color: var(--button-secondary-hover);
+  }
+}
+
+.button-danger {
+  @extend .button;
+  background-color: var(--button-danger);
+  color: var(--text-color-contrast);
+  
+  &:hover {
+    background-color: var(--button-danger-hover);
+  }
+}
