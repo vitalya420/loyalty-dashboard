@@ -1,0 +1,33 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &.row {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .text-input {
+      padding: 5px;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      background-color: var(--background-color);
+      transition: all 0.3s ease;
+      color: var(--text-color);
+    }
+    
+    
+    .text-input:focus {
+      border: 1px solid var(--blue-accent);
+      outline: none;
+    }
+    
+    
+  }
+}

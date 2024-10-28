@@ -28,7 +28,7 @@ hr {
   margin-bottom: 20px;
   border-radius: 10px;
   background: var(--background-primary-color);
-
+  @include color-transition;
 }
 
 .text-no-wrap {

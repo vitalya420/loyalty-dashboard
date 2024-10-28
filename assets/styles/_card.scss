@@ -1,0 +1,18 @@
+@import 'mixins';
+
+.card {
+  @include rounded;
+  @include hover-box-shadow;
+  @include color-transition;
+  
+  .card-header {
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+    padding: 5px 10px;
+    user-select: none;
+  }
+
+  .card-body {
+    padding: 0px 10px;
+  }
+}

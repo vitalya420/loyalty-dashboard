@@ -9,6 +9,8 @@
   font-weight: 500;
   transition: all 0.2s ease-in-out;
   box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 0.5rem;
 
   &:hover {
     box-shadow: var(--shadow-md);
@@ -42,5 +44,12 @@
   
   &:hover {
     background-color: var(--button-danger-hover);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hideable {
+    display: none;
   }
 }

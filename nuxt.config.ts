@@ -7,5 +7,8 @@ export default defineNuxtConfig({
     '@/assets/styles/table.scss',
     '@/assets/styles/grid.scss',
     '@/assets/styles/_buttons.scss',
+    '@/assets/styles/_card.scss',
+    '@/assets/styles/_switch.scss',
+    '@/assets/styles/_form.scss',
   ]
 })

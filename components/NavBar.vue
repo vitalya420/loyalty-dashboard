@@ -6,16 +6,16 @@
           <span>Dark Mode:</span>
           <input 
             type="checkbox" 
-            class="theme-toggle__input"
+            class="switch"
             @change="toggleTheme"
             :checked="isDarkMode"
             aria-label="Toggle dark mode"
           >
         </label>
       </div>
-      <button class="navbar__button navbar__button--logout" aria-label="Logout">
-        <i class="bi bi-box-arrow-left"></i>
-        <span>Logout</span>
+      <button class="button-danger" aria-label="Logout">
+        <i class="bi bi-box-arrow-left icon"></i>
+        <span class="hideable">Logout</span>
       </button>
     </nav>
   </div>
