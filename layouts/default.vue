@@ -63,7 +63,7 @@ export default {
 <style>
 .app-wrapper {
   display: flex;
-  min-height: 100dvh;
+  height: 100dvh;
   overflow-x: hidden;
   background-color: var(--background-color);
   color: var(--text-color);
@@ -72,8 +72,12 @@ export default {
 
 .app-main {
   flex-grow: 1;
+  overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-color) var(--background-primary-color);
 }
+
 
 .page-view {
   margin: calc(10px + 15px);

@@ -5,7 +5,7 @@
     <div class="sidebar" :class="{ 'sidebar-expanded': expanded }">
       <div class="sidebar-head">
         <div class="sidebar-logo" :class="{ 'opacity-0': !expanded }"></div>
-        <button class="sidebar-switch-btn " @click="switchSidebar">
+        <button class="sidebar-switch-btn" @click="switchSidebar">
           <i class="bi" :class="expanded ? 'bi-caret-left-fill' : 'bi-caret-right-fill'"></i>
         </button>
       </div>
@@ -47,15 +47,25 @@ export default {
       expanded: false,
     }
   },
+  mounted() {
+    // Access localStorage only in the client-side
+    const savedState = localStorage.getItem('sidebarExpanded');
+    if (savedState !== null) {
+      this.expanded = JSON.parse(savedState);
+    }
+  },
   methods: {
     expand(){
       this.expanded = true;
+      localStorage.setItem('sidebarExpanded', JSON.stringify(this.expanded));
     },
     collapse(){
       this.expanded = false;
+      localStorage.setItem('sidebarExpanded', JSON.stringify(this.expanded));
     },
     switchSidebar(){
       this.expanded = !this.expanded;
+      localStorage.setItem('sidebarExpanded', JSON.stringify(this.expanded));
     },
     isActive(path){
       const regex = new RegExp(`^${path}(\\/.*)?$`);
@@ -67,6 +77,4 @@ export default {
 
 <style scoped lang="scss">
 @import url('../assets/styles/sidebar.scss');
-
-
 </style>
