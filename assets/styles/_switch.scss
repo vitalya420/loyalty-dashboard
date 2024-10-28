@@ -17,11 +17,15 @@
     height: 1.1rem;
     border-radius: 50%;
     background-color: var(--background-primary-color);
-    transition: transform 0.2s ease;
+    transition: all 0.2s ease;
+  }
+
+  &:checked {
+    background-color: var(--blue-primary);
   }
 
   &:checked::after {
     transform: translateX(1.5rem);
-  }
-  
+    background-color: white;
+  } 
 }
