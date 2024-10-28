@@ -1,9 +1,9 @@
-@import 'mixins';
+@use 'mixins';
 
 .card {
-  @include rounded;
-  @include hover-box-shadow;
-  @include color-transition;
+  @include mixins.rounded;
+  @include mixins.hover-box-shadow;
+  @include mixins.color-transition;
   
   .card-header {
     width: 100%;

@@ -1,9 +1,9 @@
-@import 'variables';
+@use 'variables';
 
 
 .button {
   padding: 0.5rem 1rem;
-  border-radius: $border-radius;
+  border-radius: variables.$border-radius;
   cursor: pointer;
   border: none;
   font-weight: 500;

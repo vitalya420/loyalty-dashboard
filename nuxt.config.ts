@@ -1,4 +1,4 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// nuxt.config.js
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
@@ -10,5 +10,12 @@ export default defineNuxtConfig({
     '@/assets/styles/_card.scss',
     '@/assets/styles/_switch.scss',
     '@/assets/styles/_form.scss',
-  ]
-})
+  ],
+  build: {
+    loaders: {
+      scss: {
+        implementation: require('sass'),
+      },
+    },
+  },
+});

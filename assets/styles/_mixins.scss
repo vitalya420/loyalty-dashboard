@@ -15,9 +15,7 @@ $border-radius: 12px;
 }
 
 @mixin rounded {
-  & {
-    border-radius: $border-radius;
-  }
+  border-radius: $border-radius;
 }
 
 @mixin ease-transtion {

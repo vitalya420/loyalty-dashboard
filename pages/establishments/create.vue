@@ -13,7 +13,7 @@
           </div>
           <div class="input-group">
             <label for="">Select Images</label>
-            <input type="file" multiple>
+            <ImagesSelect></ImagesSelect>
           </div>
         </form>
       </Card>
